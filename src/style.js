@@ -12,17 +12,17 @@ export const spacing = {
   double: '2rem',
 };
 
-export const vColors = {
+export const colors = {
   blue: '#0074D9',
   white: '#FFFFFF',
   black: '#111111',
 };
 
-export const vFontFamily = css`
+export const fontFamily = css`
   font-family: 'Nunito Sans', sans-serif;
 `;
 
-export const vFontBold = css`
+export const fontBold = css`
   font-weight: 900;
 `;
 
@@ -88,12 +88,12 @@ export const sReset = css`
 export const Panel = styled.div`
   width: 100%;
   height: 100%;
-  background-color: ${vColors.white};
+  background-color: ${colors.white};
   display: block;
 `;
 
 export const PanelBlue = styled(Panel)`
-  background-color: ${vColors.blue};
+  background-color: ${colors.blue};
 `;
 
 export const Container = styled.div`
@@ -115,7 +115,7 @@ export const ContainerPadded = styled(Container)`
 export const Hero = styled.header`
   width: 100%;
   display: block;
-  background-color: ${vColors.blue};
+  background-color: ${colors.blue};
   padding: ${spacing.full};
 `;
 
@@ -123,9 +123,9 @@ export const HeroCopy = styled.h1`
   font-size: 136px;
   text-align: center;
   display: block;
-  color: ${vColors.white};
-  ${vFontBold}
-  ${vFontFamily}
+  color: ${colors.white};
+  ${fontBold}
+  ${fontFamily}
 
   ${media.tablet`
     font-size: 276px;
@@ -136,7 +136,7 @@ export const SubheaderCopy = styled.h3`
   font-size: 18px;
   text-align: center;
   display: block;
-  ${vFontFamily}
+  ${fontFamily}
 
   ${media.tablet`
     font-size: 24px;
@@ -146,7 +146,7 @@ export const SubheaderCopy = styled.h3`
 export const SubheaderCopyBold = styled(SubheaderCopy)`
   font-size: 24px;
   text-transform: uppercase;
-  ${vFontBold}
+  ${fontBold}
 
   ${media.tablet`
     font-size: 30px;
@@ -162,19 +162,27 @@ export const CenterPosition = styled.div`
   `}
 `;
 
-export const CenterOffsetPosition = styled.div`
-  margin-top: 25%;
+export const CallToAction = styled.button`
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: ${spacing.full} ${spacing.double};
+  background-color: ${colors.blue};
+  color: ${colors.white};
+  margin-left: auto;
+  margin-right: auto;
   display: block;
+  ${fontFamily}
 
-  ${media.desktopSmall`
-    margin-top: 50%;
-  `}
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const ListHeaderCopy = styled(SubheaderCopyBold)`
   text-align: left;
-  color: ${vColors.blue};
+  color: ${colors.white};
   position: relative;
+  margin-bottom: ${spacing.full};
 
   &:after {
     content: '';
@@ -184,6 +192,31 @@ export const ListHeaderCopy = styled(SubheaderCopyBold)`
     left: 0;
     bottom: 0;
     height: 4px;
-    background-color: ${vColors.blue};
+    background-color: ${colors.white};
+  }
+`;
+
+export const List = styled.ul`
+  margin-bottom: ${spacing.full};
+  display: block;
+`;
+
+export const ListItem = styled.li`
+  display: block;
+  color: ${colors.white};
+  ${fontFamily}
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const ListCopy = styled.p`
+  display: block;
+  color: ${colors.white};
+  ${fontFamily}
+
+  &:hover {
+    cursor: pointer;
   }
 `;
