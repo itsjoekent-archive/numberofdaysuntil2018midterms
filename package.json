@@ -13,6 +13,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "surge ./build"
+    "deploy": "surge ./build http://numberofdaysuntil2018midterms.com/"
+  },
+  "devDependencies": {
+    "surge": "^0.19.0"
   }
 }
